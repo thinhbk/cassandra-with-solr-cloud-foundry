@@ -1,0 +1,21 @@
+---
+spring:
+  profiles: dev
+
+
+cassandra:
+  keyspace: dev
+ 
+---
+spring:
+  profiles: test
+
+---
+spring:
+  profiles: cloud
+  jackson:
+    serialization:
+      write-dates-as-timestamps: true
+      
+cassandra:
+  keyspace: ${KEY_SPACE}

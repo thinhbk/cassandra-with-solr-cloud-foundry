@@ -1,0 +1,22 @@
+<configuration>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="org.springframework.data.cassandra" level="DEBUG" />
+	<logger name="org.springframework.data.solr" level="DEBUG" />
+	<logger name="org.springframework" level="INFO" />
+	<logger name="org.hibernate" level="WARN" />
+	<logger name="org.jboss" level="WARN" />
+	<logger name="org.apache.http.wire" level="WARN" />
+	<logger name="org.apache.commons.digester.Digester" level="WARN" />
+
+	<root level="info">
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</configuration>

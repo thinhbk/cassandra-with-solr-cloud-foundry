@@ -1,0 +1,11 @@
+applications:
+  - name: predix-cassandra-gateway-dev
+    memory: 1G
+    instances: '1'
+    services:
+      - {uaa service}
+      - {dse cassandra service}
+    env:
+      KEY_SPACE: aetest1  
+    buildpack: 'https://github.com/cloudfoundry/java-buildpack.git#v3.19.1'
+    path: target/cassandra-spring-rest-1.0.0.jar
